@@ -1,3 +1,5 @@
+#include <IRremote.h>
+
 unsigned char i=0,data[24]={	1,1,1,1,1,1,1,1,
   1,1,1,1,1,1,1,1,
   1,1,1,1,1,1,1,1};
@@ -5,6 +7,12 @@ unsigned char i=0,data[24]={	1,1,1,1,1,1,1,1,
 unsigned char ledData[24] = {1,1,1,1,1,1,1,1,
   1,1,1,1,1,1,1,1,
   1,1,1,1,1,1,1,1};
+
+
+const int RECV_PIN = 2;
+IRrecv irrecv(RECV_PIN);
+decode_results results;
+
 
 void setup() {
   // put your setup code here, to run once:
@@ -21,6 +29,9 @@ void setup() {
 
   resetTubeAndLed();
 
+  irrecv.enableIRIn();
+  irrecv.blink13(true);
+  
   Serial.begin(9600);
 }
 void resetTubeAndLed(){
@@ -165,7 +176,11 @@ void ledRest(void){
 unsigned char x;
 void loop() {
   // put your main code here, to run repeatedly:
-  
+  if (irrecv.decode(&results)){
+        Serial.println(results.value, HEX);
+        irrecv.resume();
+  }
+  /*
   for(i=0;i<6;i++){
       ControlTube(i,x);
   }
@@ -182,5 +197,6 @@ void loop() {
    }
    Serial.print('\n'); 
    RGBledControl(63,x);
-  delay(1000);
+   */
+  delay(10000);
 }
