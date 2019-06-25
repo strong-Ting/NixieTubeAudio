@@ -1,5 +1,5 @@
 #include <IRremote.h>
-
+#include <TimerOne.h>
 unsigned char i=0,data[24]={	1,1,1,1,1,1,1,1,
   1,1,1,1,1,1,1,1,
   1,1,1,1,1,1,1,1};
@@ -29,8 +29,15 @@ void setup() {
 
   resetTubeAndLed();
 
+  Timer1.initialize(1); //1us
+  Timer1.attachInterrupt(RGBledPWM);
+
+
+
   irrecv.enableIRIn();
   irrecv.blink13(true);
+
+
   
   Serial.begin(9600);
 }
@@ -133,21 +140,26 @@ void RGBledControl(unsigned char led,unsigned char color){
   
   RGBledUpdate();
 }
-/*
-void RGBledPWM(unsigned char led,unsigned char color,unsigned char bright){
 
+unsigned char ledValue,colorValue,brightValue,microSecCount;
+void RGBledPWM(){
 
-	if(bright==cmt1Count){
-		RGBledControl(led,0);
+  if(microSecCount<255){
+    microSecCount++; 
+  }else{
+    microSecCount=0;
+  }
+  
+	if(brightValue==microSecCount){
+		RGBledControl(ledValue,0);
 	
-	}else if(cmt1Count==0){
-		RGBledControl(led,color);
+	}else if(microSecCount==0){
+		RGBledControl(ledValue,colorValue);
 
 	}
 	
-}*/
+}
 void RGBledUpdate(void){
-	
 	
 	digitalWrite(5,0);//latch pin to low
 	for(i=0;i<24;i++){
@@ -180,6 +192,9 @@ void loop() {
         Serial.println(results.value, HEX);
         irrecv.resume();
   }
+  ledValue=63;
+  colorValue=7;
+  brightValue=3;
   /*
   for(i=0;i<6;i++){
       ControlTube(i,x);
