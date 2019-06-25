@@ -1,0 +1,86 @@
+Optimizing Linkage Editor (V.10.00.00.001)        13-Jun-2019 13:49:29
+
+*** Options ***
+
+-subcommand=C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\nixeTubeIR.hlk
+-noprelink
+-rom=D=R,D_1=R_1,D_2=R_2
+-nomessage
+-list="C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\nixeTubeIR.map"
+-nooptimize
+-start=B_1,R_1,B_2,R_2,B,R,SU,SI/01000,PResetPRG/0FFFF8000,C_1,C_2,C,C$*,D*,P,PIntPRG,W*/0FFFF8100,FIXEDVECT/0FFFFFFD0
+-nologo
+-input="C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\dbsct.obj"
+-input="C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\Interrupt_CMT.obj"
+-input="C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\Interrupt_IIC.obj"
+-input="C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\Interrupt_INTC.obj"
+-input="C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\nixeTubeIR.obj"
+-input="C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\R_PG_Clock.obj"
+-input="C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\R_PG_ExtInterrupt_IRQ0.obj"
+-input="C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\R_PG_I2C_C0.obj"
+-input="C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\R_PG_IO_PORT_P3.obj"
+-input="C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\R_PG_IO_PORT_P7.obj"
+-input="C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\R_PG_IO_PORT_P9.obj"
+-input="C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\R_PG_Timer_CMT_U0.obj"
+-input="C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\R_PG_Timer_CMT_U1.obj"
+-input="C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\resetprg.obj"
+-input="C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\sbrk.obj"
+-library="C:\Renesas\PDG2\lib\RX62T\RX62T_library_LQFP_64.lib"
+-library="C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\nixeTubeIR.lib"
+-output="C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\nixeTubeIR.abs"
+-end
+
+*** Error information ***
+
+** L1100 (W) Cannot find "PIntPRG" specified in option "start"
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+
+B_1
+                                  00001000  00001011        12   1
+R_1
+                                  00001012  00001151       140   1
+B_2
+                                  00001152  00001159         8   2
+R_2
+                                  0000115a  0000115a         0   2
+B
+                                  0000115c  000015a7       44c   4
+R
+                                  000015a8  00001603        5c   4
+SU
+                                  00001604  00001903       300   4
+SI
+                                  00001904  00001a03       100   4
+PResetPRG
+                                  ffff8000  ffff8045        46   1
+C_1
+                                  ffff8100  ffff810f        10   1
+C_2
+                                  ffff8110  ffff8117         8   2
+C
+                                  ffff8118  ffff8134        1d   4
+C$DSEC
+                                  ffff8138  ffff815b        24   4
+C$BSEC
+                                  ffff815c  ffff8173        18   4
+C$VECT
+                                  ffff8174  ffff8573       400   4
+D
+                                  ffff8574  ffff85cf        5c   4
+D_2
+                                  ffff85d0  ffff85d0         0   2
+D_1
+                                  ffff85d0  ffff870f       140   1
+P
+                                  ffff8710  ffffb83b      312c   1
+W_1
+                                  ffffb83c  ffffb83c         0   1
+W_2
+                                  ffffb83c  ffffb84f        14   2
+W
+                                  ffffb850  ffffb850         0   4
+FIXEDVECT
+                                  ffffffd0  ffffffff        30   4

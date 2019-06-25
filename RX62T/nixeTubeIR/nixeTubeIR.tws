@@ -1,0 +1,31 @@
+[HIMDBVersion]
+2.0
+[DATABASE_VERSION]
+"1.2" 
+[CURRENT_PROJECT]
+"nixeTubeIR" 
+[GENERAL_DATA]
+[BREAKPOINTS]
+[OPEN_WORKSPACE_FILES]
+"C:\Renesas\PDG2_proj\nineClock\i_src\Interrupt_CMT.c" 
+"C:\Renesas\PDG2_proj\nineClock\i_src\r_pdl_iic_RX62Txx.h" 
+"C:\Renesas\PDG2_proj\nixeTubeIR\CMT\R_PG_Timer_CMT_U1.c" 
+"C:\Renesas\PDG2_proj\nixeTubeIR\i_src\r_pdl_iic.h" 
+"C:\Renesas\PDG2_proj\nixeTubeIR\i_src\r_pdl_iic_RX62Txx.h" 
+"C:\Renesas\PDG2_proj\nixeTubeIR\RIIC\R_PG_I2C_C0.c" 
+"C:\Renesas\PDG2_proj\nixeTubeIR\RIIC\R_PG_I2C_C0.h" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\nixeTubeIR.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\resetprg.c" 
+[WORKSPACE_FILE_STATES]
+"C:\Renesas\PDG2_proj\nineClock\i_src\Interrupt_CMT.c" 52 52 822 247 0 2 
+"C:\Renesas\PDG2_proj\nineClock\i_src\r_pdl_iic_RX62Txx.h" 26 26 822 266 0 6 
+"C:\Renesas\PDG2_proj\nixeTubeIR\CMT\R_PG_Timer_CMT_U1.c" 78 78 822 266 0 8 
+"C:\Renesas\PDG2_proj\nixeTubeIR\RIIC\R_PG_I2C_C0.c" 78 78 822 247 0 3 
+"C:\Renesas\PDG2_proj\nixeTubeIR\RIIC\R_PG_I2C_C0.h" 104 104 822 266 0 4 
+"C:\Renesas\PDG2_proj\nixeTubeIR\i_src\r_pdl_iic.h" 52 52 822 266 0 7 
+"C:\Renesas\PDG2_proj\nixeTubeIR\i_src\r_pdl_iic_RX62Txx.h" 0 0 822 266 0 5 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\nixeTubeIR.c" -8 -31 942 409 1 1 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\resetprg.c" 0 0 818 243 0 0 
+[LOADED_PROJECTS]
+"nixeTubeIR" 
+[END]

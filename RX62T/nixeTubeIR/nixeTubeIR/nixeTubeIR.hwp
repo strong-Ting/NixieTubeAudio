@@ -1,0 +1,320 @@
+[HIMDBVersion]
+2.0
+[DATABASE_VERSION]
+"2.8" 
+[PROJECT_DETAILS]
+"nixeTubeIR" "C:\WorkSpace\nixeTubeIR\nixeTubeIR" "C:\WorkSpace\nixeTubeIR\nixeTubeIR\nixeTubeIR.hwp" "RX" "Renesas RX Standard" "Application" "RX600" "RX62T" 
+[INFORMATION]
+"No project information available" 
+[TOOL_CHAIN]
+"Renesas RX Standard Toolchain" "1.0.1.0" 
+[CONFIGURATIONS]
+"Debug" "C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug" 
+"Debug_RX600_Segger_J-Link" "C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug_RX600_Segger_J-Link" 
+"Release" "C:\WorkSpace\nixeTubeIR\nixeTubeIR\Release" 
+[BUILD_PHASES]
+"Renesas OptLinker" 1 
+"Renesas RX Assembler" 1 
+"Renesas RX C/C++ Compiler" 1 
+"Renesas RX C/C++ Library Generator" 1 
+"Renesas RX Configurator" 1 
+[TOOL_ENVIRONMENT]
+[EXTENSIONS]
+"Absolute file" "ABS" 
+"Assembly include file" "INC" 
+"Assembly list file" "LST" 
+"Assembly source file" "S" 
+"Assembly source file" "SRC" 
+"Binary file" "BIN" 
+"C header file" "H" 
+"C source file" "C" 
+"C++ header file" "HPP" 
+"C++ source file" "CC" 
+"C++ source file" "CP" 
+"C++ source file" "CPP" 
+"CPU information file" "CPU" 
+"Calling information file" "CAL" 
+"Configuration file" "CFG" 
+"Debug information file" "DBG" 
+"Hex file" "HEX" 
+"Library file" "LIB" 
+"Library information file" "LBP" 
+"Linkage map file" "MAP" 
+"Linkage symbol file" "FSY" 
+"Object file" "OBJ" 
+"Optimize map file" "bls" 
+"Preprocessed C source file" "P" 
+"Preprocessed C++ source file" "PP" 
+"Relocatable file" "REL" 
+"Rts information file" "RTS" 
+"S-Record file" "MOT" 
+"Stack information file" "SNI" 
+"TD include object file" "RTI" 
+[FILE_GROUPS]
+"Absolute file" "BIN" "NONE" "" 
+"Assembly include file" "TEXT" "EDITOR" "" 
+"Assembly list file" "TEXT" "EDITOR" "" 
+"Assembly source file" "TEXT" "EDITOR" "" 
+"Binary file" "BIN" "NONE" "" 
+"C header file" "TEXT" "EDITOR" "" 
+"C source file" "TEXT" "EDITOR" "" 
+"C++ header file" "TEXT" "EDITOR" "" 
+"C++ source file" "TEXT" "EDITOR" "" 
+"CPU information file" "BIN" "NONE" "" 
+"Calling information file" "BIN" "NONE" "" 
+"Configuration file" "TEXT" "EDITOR" "" 
+"Debug information file" "BIN" "NONE" "" 
+"Hex file" "TEXT" "EDITOR" "" 
+"Library file" "BIN" "NONE" "" 
+"Library information file" "TEXT" "EDITOR" "" 
+"Linkage map file" "TEXT" "EDITOR" "" 
+"Linkage symbol file" "TEXT" "EDITOR" "" 
+"Object file" "BIN" "NONE" "" 
+"Optimize map file" "BIN" "NONE" "" 
+"Preprocessed C source file" "TEXT" "EDITOR" "" 
+"Preprocessed C++ source file" "TEXT" "EDITOR" "" 
+"Relocatable file" "BIN" "NONE" "" 
+"Rts information file" "BIN" "NONE" "" 
+"S-Record file" "TEXT" "EDITOR" "" 
+"Stack information file" "BIN" "NONE" "" 
+"TD include object file" "BIN" "NONE" "" 
+[ASSOCIATED_APPLICATIONS]
+[TOOLCHAIN_PHASE]
+"Renesas OptLinker" 
+"Renesas RX Assembler" 
+"Renesas RX C/C++ Compiler" 
+"Renesas RX C/C++ Library Generator" 
+"Renesas RX Configurator" 
+[UTILITY_PHASE]
+[CUSTOM_PHASES]
+[CUSTOM_PHASE_INPUT_GROUP]
+[CUSTOM_PHASE_OUTPUT_SYNTAX]
+[BUILD_ORDER]
+"Renesas RX C/C++ Library Generator" 1 
+"Renesas RX C/C++ Compiler" 1 
+"Renesas RX Assembler" 1 
+"Renesas OptLinker" 1 
+"Renesas RX Configurator" 0 
+[BUILD_PHASE_DETAILS]
+"Renesas OptLinker" "Object file|Library file|Relocatable file" 0 
+"Renesas RX Assembler" "Assembly source file|Linkage symbol file" 1 
+"Renesas RX C/C++ Compiler" "C source file|C++ source file" 1 
+"Renesas RX C/C++ Library Generator" "" 0 
+"Renesas RX Configurator" "Configuration file" 0 
+[BUILD_FILE_ORDER_Assembly source file]
+"Renesas RX Assembler" 1 
+[BUILD_FILE_ORDER_C source file]
+"Renesas RX C/C++ Compiler" 1 
+[BUILD_FILE_ORDER_C++ source file]
+"Renesas RX C/C++ Compiler" 1 
+[BUILD_FILE_ORDER_Linkage symbol file]
+"Renesas RX Assembler" 1 
+[SCRAP]
+"Project Generator Setup File" "" 
+[MAPPINGS]
+"Assembly source file" "Renesas RX Assembler" "Renesas RX C/C++ Compiler" 
+"Library file" "Renesas OptLinker" "Renesas RX C/C++ Library Generator" 
+"Object file" "Renesas OptLinker" "Renesas RX Assembler" 
+"Object file" "Renesas OptLinker" "Renesas RX C/C++ Compiler" 
+[PROJECT_FILES]
+"C:\Renesas\PDG2_proj\nineClock\CMT\R_PG_Timer_CMT_U0.c" "User" "AddFromPDG" 2 
+"C:\Renesas\PDG2_proj\nineClock\ICU\R_PG_ExtInterrupt_IRQ0.c" "User" "AddFromPDG" 2 
+"C:\Renesas\PDG2_proj\nineClock\IO\R_PG_IO_PORT_P7.c" "User" "AddFromPDG" 2 
+"C:\Renesas\PDG2_proj\nineClock\IO\R_PG_IO_PORT_P9.c" "User" "AddFromPDG" 2 
+"C:\Renesas\PDG2_proj\nineClock\SYSTEM\R_PG_Clock.c" "User" "AddFromPDG" 2 
+"C:\Renesas\PDG2_proj\nineClock\i_src\Interrupt_CMT.c" "User" "AddFromPDG" 2 
+"C:\Renesas\PDG2_proj\nineClock\i_src\Interrupt_INTC.c" "User" "AddFromPDG" 2 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\dbsct.c" "User" "C source file" 2 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\intprg.c" "User" "C source file" 2 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\nixeTubeIR.c" "User" "C source file" 2 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\resetprg.c" "User" "C source file" 2 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\sbrk.c" "User" "C source file" 2 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\vecttbl.c" "User" "C source file" 2 
+"c:\renesas\PDG2_proj\nixeTubeIR\CMT\R_PG_Timer_CMT_U1.c" "User" "AddFromPDG" 2 
+"c:\renesas\PDG2_proj\nixeTubeIR\IO\R_PG_IO_PORT_P3.c" "User" "AddFromPDG" 2 
+"c:\renesas\PDG2_proj\nixeTubeIR\RIIC\R_PG_I2C_C0.c" "User" "AddFromPDG" 2 
+"c:\renesas\PDG2_proj\nixeTubeIR\i_src\Interrupt_IIC.c" "User" "AddFromPDG" 2 
+[FOLDER]
+"AddFromPDG" "AddFromPDG" 
+"C source file" "C source file" 
+[GENERAL_DATA_PROJECT]
+"USE_CUSTOM_LINKAGE_ORDER" "0" 
+[ON_DEMAND_COMPONENTS_LOADED]
+[SYNC_SESSION_NAMES]
+[SESSIONS]
+"DefaultSession" "C:\WorkSpace\nixeTubeIR\nixeTubeIR\DefaultSession.hsf" 0 
+"SessionRX600_Segger_J-Link" "C:\WorkSpace\nixeTubeIR\nixeTubeIR\SessionRX600_Segger_J-Link.hsf" 0 
+[GENERAL_DATA_SESSION_DefaultSession]
+[GENERAL_DATA_SESSION_SessionRX600_Segger_J-Link]
+[OPTIONS_Debug_Renesas OptLinker]
+"Single Shot" "0b27b89cee125d10" 6 
+[OPTIONS_Debug_Renesas RX Assembler]
+"Assembly source file" "09807a882c025d10" 5 
+"Linkage symbol file" "09807a882c025d10" 5 
+[OPTIONS_Debug_Renesas RX C/C++ Compiler]
+"C source file" "09807a882c025d10" 4 
+"C++ source file" "09807a882c025d10" 4 
+"C:\Renesas\PDG2_proj\nineClock\CMT\R_PG_Timer_CMT_U0.c" "08d4bbc44c025d10" 3 
+"C:\Renesas\PDG2_proj\nineClock\ICU\R_PG_ExtInterrupt_IRQ0.c" "08981bc44c025d10" 3 
+"C:\Renesas\PDG2_proj\nineClock\IO\R_PG_IO_PORT_P7.c" "0ddb4bc44c025d10" 3 
+"C:\Renesas\PDG2_proj\nineClock\IO\R_PG_IO_PORT_P9.c" "01bc7bc44c025d10" 3 
+"C:\Renesas\PDG2_proj\nineClock\SYSTEM\R_PG_Clock.c" "0355eac44c025d10" 3 
+"C:\Renesas\PDG2_proj\nineClock\i_src\Interrupt_CMT.c" "04402cc44c025d10" 3 
+"C:\Renesas\PDG2_proj\nineClock\i_src\Interrupt_INTC.c" "0af55cc44c025d10" 3 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\dbsct.c" "096499c44c025d10" 3 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\intprg.c" "0d531ac44c025d10" 3 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\nixeTubeIR.c" "0f74bac44c025d10" 3 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\resetprg.c" "0ba38ac44c025d10" 3 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\sbrk.c" "0456d9c44c025d10" 3 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\vecttbl.c" "03194ac44c025d10" 3 
+"c:\renesas\PDG2_proj\nixeTubeIR\CMT\R_PG_Timer_CMT_U1.c" "03ffc3775c025d10" 2 
+"c:\renesas\PDG2_proj\nixeTubeIR\IO\R_PG_IO_PORT_P3.c" "0324476476125d10" 2 
+"c:\renesas\PDG2_proj\nixeTubeIR\RIIC\R_PG_I2C_C0.c" "01d2a3083d125d10" 2 
+"c:\renesas\PDG2_proj\nixeTubeIR\i_src\Interrupt_IIC.c" "0adfd3083d125d10" 2 
+[OPTIONS_Debug_Renesas RX C/C++ Library Generator]
+"Single Shot" "09807a882c025d10" 1 
+[OPTIONS_Debug_Renesas RX Configurator]
+"Single Shot" "0e7c8dc63d125d10" 7 
+[OPTIONS_Debug]
+"" 0 
+"[S|OUTPUTPATH|^"$(CONFIGDIR)\$(PROJECTNAME).lib^"] [V|VERSION|1] [S|CPU|RX600] [S|ENDIAN|LITTLE] [S|ROUND|NEAREST] [S|DBL_SIZE|4] [B|SIGNED_CHAR|0] [B|SIGNED_BITFIELD|0] [S|BIT_ORDER|RIGHT] [S|FINT_REGISTER|0] [S|BRANCH|24] [S|LANG|C] [B|RUNTIME|1] [B|CTYPE|0] [B|MATH|0] [B|MATHF|0] [B|STDARG|0] [B|STDIO|1] [B|STDLIB|1] [B|STRING|1] [B|IOS|0] [B|NEW|1] [B|COMPLEX|0] [B|CPPSTRING|0] [S|MODE|BUILD/CHANGED]" 1 
+"[V|VERSION|1] [B|COMMAND|1] [S|SPEC|UITRON4] [S|OUTPUTPATH|^"$(CONFIGDIR)^"] [S|CPU|RX600] [S|ENDIAN|LITTLE] [S|FINT_REGISTER|0]" 7 
+"[V|VERSION|1] [B|DEBUG|1] [S|OUTPUTPATH|^"$(CONFIGDIR)\$(FILELEAF).obj^"] [B|LISTFILE|0] [S|CPU|RX600] [S|ENDIAN|LITTLE] [S|FINT_REGISTER|0]" 5 
+"[V|VERSION|1] [B|DEBUG|1] [S|OUTPUTPATH|^"$(CONFIGDIR)\$(FILELEAF).obj^"] [B|LISTFILE|0] [S|CPU|RX600] [S|ENDIAN|LITTLE] [S|ROUND|NEAREST] [S|DBL_SIZE|4] [B|SIGNED_CHAR|0] [B|SIGNED_BITFIELD|0] [S|BIT_ORDER|RIGHT] [S|FINT_REGISTER|0] [S|BRANCH|24]" 4 
+"[V|VERSION|1] [B|DEBUG|1] [S|OUTPUTPATH|^"$(CONFIGDIR)\$(FILELEAF).obj^"] [B|LISTFILE|0] [S|CPU|RX600] [S|ENDIAN|LITTLE] [S|ROUND|NEAREST] [S|DBL_SIZE|4] [B|SIGNED_CHAR|0] [B|SIGNED_BITFIELD|0] [S|BIT_ORDER|RIGHT] [S|FINT_REGISTER|0] [S|BRANCH|24] [S|INCLUDE|^"c:\renesas\PDG2_proj\nixeTubeIR^"|^"c:\renesas\PDG2_proj\nixeTubeIR\i_src^"]" 2 
+"[V|VERSION|1] [B|DEBUG|1] [S|OUTPUTPATH|^"$(CONFIGDIR)\$(FILELEAF).obj^"] [B|LISTFILE|0] [S|CPU|RX600] [S|ENDIAN|LITTLE] [S|ROUND|NEAREST] [S|DBL_SIZE|4] [B|SIGNED_CHAR|0] [B|SIGNED_BITFIELD|0] [S|BIT_ORDER|RIGHT] [S|FINT_REGISTER|0] [S|BRANCH|24] [S|INCLUDE|^"c:\renesas\PDG2_proj\nixeTubeIR^"|^"c:\renesas\PDG2_proj\nixeTubeIR\i_src^"|^"C:\Renesas\PDG2_proj\nineClock^"|^"C:\Renesas\PDG2_proj\nineClock\i_src^"]" 3 
+"[V|VERSION|6] [B|DEBUG|1] [S|OUTPUT|^"$(CONFIGDIR)\$(PROJECTNAME).abs^"] [B|LIST|1] [S|LIST|^"$(CONFIGDIR)\$(PROJECTNAME).map^"] [B|OPTIMIZE|0] [S|ROM|(D,R)|(D_1,R_1)|(D_2,R_2)] [S|ENDIAN|LITTLE] [S|FORM|STYPE] [S|OUTPUT|^"$(CONFIGDIR)\$(PROJECTNAME).mot^"] [S|START|B_1,R_1,B_2,R_2,B,R,SU,SI(1000)|PResetPRG(FFFF8000)|C_1,C_2,C,C$*,D*,P,PIntPRG,W*(FFFF8100)|FIXEDVECT(FFFFFFD0)] [S|INPUTLIBRARY|^"C:\Renesas\PDG2\lib\RX62T\RX62T_library_LQFP_64.lib^"]" 6 
+[EXCLUDED_FILES_Debug]
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\intprg.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\intprg.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\intprg.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\intprg.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\intprg.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\intprg.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\intprg.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\intprg.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\intprg.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\intprg.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\intprg.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\intprg.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\intprg.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\intprg.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\intprg.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\intprg.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\vecttbl.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\vecttbl.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\vecttbl.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\vecttbl.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\vecttbl.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\vecttbl.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\vecttbl.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\vecttbl.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\vecttbl.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\vecttbl.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\vecttbl.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\vecttbl.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\vecttbl.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\vecttbl.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\vecttbl.c" 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\vecttbl.c" 
+[LINKAGE_ORDER_Debug]
+[GENERAL_DATA_CONFIGURATION_Debug]
+[OPTIONS_Debug_RX600_Segger_J-Link_Renesas OptLinker]
+"Single Shot" "0f0dddc63d125d10" 4 
+[OPTIONS_Debug_RX600_Segger_J-Link_Renesas RX Assembler]
+"Assembly source file" "09807a882c025d10" 3 
+"Linkage symbol file" "09807a882c025d10" 3 
+[OPTIONS_Debug_RX600_Segger_J-Link_Renesas RX C/C++ Compiler]
+"C source file" "09807a882c025d10" 2 
+"C++ source file" "09807a882c025d10" 2 
+"C:\Renesas\PDG2_proj\nineClock\CMT\R_PG_Timer_CMT_U0.c" "09891e4a2c025d10" 2 
+"C:\Renesas\PDG2_proj\nineClock\ICU\R_PG_ExtInterrupt_IRQ0.c" "0a35674a2c025d10" 2 
+"C:\Renesas\PDG2_proj\nineClock\IO\R_PG_IO_PORT_P7.c" "00c6994a2c025d10" 2 
+"C:\Renesas\PDG2_proj\nineClock\IO\R_PG_IO_PORT_P9.c" "0ecbdb4a2c025d10" 2 
+"C:\Renesas\PDG2_proj\nineClock\SYSTEM\R_PG_Clock.c" "0d8bf44a2c025d10" 2 
+"C:\Renesas\PDG2_proj\nineClock\i_src\Interrupt_CMT.c" "0060725a2c025d10" 2 
+"C:\Renesas\PDG2_proj\nineClock\i_src\Interrupt_INTC.c" "0c5b345a2c025d10" 2 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\dbsct.c" "09807a882c025d10" 2 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\intprg.c" "09807a882c025d10" 2 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\nixeTubeIR.c" "09807a882c025d10" 2 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\resetprg.c" "09807a882c025d10" 2 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\sbrk.c" "09807a882c025d10" 2 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\vecttbl.c" "09807a882c025d10" 2 
+"c:\renesas\PDG2_proj\nixeTubeIR\CMT\R_PG_Timer_CMT_U1.c" "0c9b02675c025d10" 2 
+"c:\renesas\PDG2_proj\nixeTubeIR\IO\R_PG_IO_PORT_P3.c" "05786c3476125d10" 2 
+"c:\renesas\PDG2_proj\nixeTubeIR\RIIC\R_PG_I2C_C0.c" "0686f9c63d125d10" 2 
+"c:\renesas\PDG2_proj\nixeTubeIR\i_src\Interrupt_IIC.c" "0e7c8dc63d125d10" 2 
+[OPTIONS_Debug_RX600_Segger_J-Link_Renesas RX C/C++ Library Generator]
+"Single Shot" "09807a882c025d10" 1 
+[OPTIONS_Debug_RX600_Segger_J-Link_Renesas RX Configurator]
+"Single Shot" "0e7c8dc63d125d10" 5 
+[OPTIONS_Debug_RX600_Segger_J-Link]
+"" 0 
+"[S|OUTPUTPATH|^"$(CONFIGDIR)\$(PROJECTNAME).lib^"] [V|VERSION|1] [S|CPU|RX600] [S|ENDIAN|LITTLE] [S|ROUND|NEAREST] [S|DBL_SIZE|4] [B|SIGNED_CHAR|0] [B|SIGNED_BITFIELD|0] [S|BIT_ORDER|RIGHT] [S|FINT_REGISTER|0] [S|BRANCH|24] [S|LANG|C] [B|RUNTIME|1] [B|CTYPE|0] [B|MATH|0] [B|MATHF|0] [B|STDARG|0] [B|STDIO|1] [B|STDLIB|1] [B|STRING|1] [B|IOS|0] [B|NEW|1] [B|COMPLEX|0] [B|CPPSTRING|0] [S|MODE|BUILD/CHANGED]" 1 
+"[V|VERSION|1] [B|COMMAND|1] [S|SPEC|UITRON4] [S|OUTPUTPATH|^"$(CONFIGDIR)^"] [S|CPU|RX600] [S|ENDIAN|LITTLE] [S|FINT_REGISTER|0]" 5 
+"[V|VERSION|1] [B|DEBUG|1] [S|OUTPUTPATH|^"$(CONFIGDIR)\$(FILELEAF).obj^"] [B|LISTFILE|0] [S|CPU|RX600] [S|ENDIAN|LITTLE] [S|FINT_REGISTER|0]" 3 
+"[V|VERSION|1] [B|DEBUG|1] [S|OUTPUTPATH|^"$(CONFIGDIR)\$(FILELEAF).obj^"] [B|LISTFILE|0] [S|CPU|RX600] [S|ENDIAN|LITTLE] [S|ROUND|NEAREST] [S|DBL_SIZE|4] [B|SIGNED_CHAR|0] [B|SIGNED_BITFIELD|0] [S|BIT_ORDER|RIGHT] [S|FINT_REGISTER|0] [S|BRANCH|24]" 2 
+"[V|VERSION|6] [B|DEBUG|1] [S|OUTPUT|^"$(CONFIGDIR)\$(PROJECTNAME).abs^"]  [B|LIST|1] [S|LIST|^"$(CONFIGDIR)\$(PROJECTNAME).map^"] [B|OPTIMIZE|0] [S|ROM|(D,R)|(D_1,R_1)|(D_2,R_2)] [S|ENDIAN|LITTLE] [S|FORM|STYPE] [S|OUTPUT|^"$(CONFIGDIR)\$(PROJECTNAME).mot^"] [S|START|B_1,R_1,B_2,R_2,B,R,SU,SI(1000)|PResetPRG(FFFF8000)|C_1,C_2,C,C$*,D*,P,PIntPRG,W*(FFFF8100)|FIXEDVECT(FFFFFFD0)]" 4 
+[EXCLUDED_FILES_Debug_RX600_Segger_J-Link]
+[LINKAGE_ORDER_Debug_RX600_Segger_J-Link]
+[GENERAL_DATA_CONFIGURATION_Debug_RX600_Segger_J-Link]
+[OPTIONS_Release_Renesas OptLinker]
+"Single Shot" "0f0dddc63d125d10" 4 
+[OPTIONS_Release_Renesas RX Assembler]
+"Assembly source file" "09807a882c025d10" 3 
+"Linkage symbol file" "09807a882c025d10" 3 
+[OPTIONS_Release_Renesas RX C/C++ Compiler]
+"C source file" "09807a882c025d10" 2 
+"C++ source file" "09807a882c025d10" 2 
+"C:\Renesas\PDG2_proj\nineClock\CMT\R_PG_Timer_CMT_U0.c" "09891e4a2c025d10" 2 
+"C:\Renesas\PDG2_proj\nineClock\ICU\R_PG_ExtInterrupt_IRQ0.c" "0a35674a2c025d10" 2 
+"C:\Renesas\PDG2_proj\nineClock\IO\R_PG_IO_PORT_P7.c" "00c6994a2c025d10" 2 
+"C:\Renesas\PDG2_proj\nineClock\IO\R_PG_IO_PORT_P9.c" "0ecbdb4a2c025d10" 2 
+"C:\Renesas\PDG2_proj\nineClock\SYSTEM\R_PG_Clock.c" "0d8bf44a2c025d10" 2 
+"C:\Renesas\PDG2_proj\nineClock\i_src\Interrupt_CMT.c" "0060725a2c025d10" 2 
+"C:\Renesas\PDG2_proj\nineClock\i_src\Interrupt_INTC.c" "0c5b345a2c025d10" 2 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\dbsct.c" "09807a882c025d10" 2 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\intprg.c" "09807a882c025d10" 2 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\nixeTubeIR.c" "09807a882c025d10" 2 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\resetprg.c" "09807a882c025d10" 2 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\sbrk.c" "09807a882c025d10" 2 
+"C:\WorkSpace\nixeTubeIR\nixeTubeIR\vecttbl.c" "09807a882c025d10" 2 
+"c:\renesas\PDG2_proj\nixeTubeIR\CMT\R_PG_Timer_CMT_U1.c" "0c9b02675c025d10" 2 
+"c:\renesas\PDG2_proj\nixeTubeIR\IO\R_PG_IO_PORT_P3.c" "05786c3476125d10" 2 
+"c:\renesas\PDG2_proj\nixeTubeIR\RIIC\R_PG_I2C_C0.c" "0686f9c63d125d10" 2 
+"c:\renesas\PDG2_proj\nixeTubeIR\i_src\Interrupt_IIC.c" "0e7c8dc63d125d10" 2 
+[OPTIONS_Release_Renesas RX C/C++ Library Generator]
+"Single Shot" "09807a882c025d10" 1 
+[OPTIONS_Release_Renesas RX Configurator]
+"Single Shot" "0e7c8dc63d125d10" 5 
+[OPTIONS_Release]
+"" 0 
+"[S|OUTPUTPATH|^"$(CONFIGDIR)\$(PROJECTNAME).lib^"] [V|VERSION|1] [S|CPU|RX600] [S|ENDIAN|LITTLE] [S|ROUND|NEAREST] [S|DBL_SIZE|4] [B|SIGNED_CHAR|0] [B|SIGNED_BITFIELD|0] [S|BIT_ORDER|RIGHT] [S|FINT_REGISTER|0] [S|BRANCH|24] [S|LANG|C] [B|RUNTIME|1] [B|CTYPE|0] [B|MATH|0] [B|MATHF|0] [B|STDARG|0] [B|STDIO|1] [B|STDLIB|1] [B|STRING|1] [B|IOS|0] [B|NEW|1] [B|COMPLEX|0] [B|CPPSTRING|0] [S|MODE|BUILD/CHANGED]" 1 
+"[V|VERSION|1] [B|COMMAND|1] [S|SPEC|UITRON4] [S|OUTPUTPATH|^"$(CONFIGDIR)^"] [S|CPU|RX600] [S|ENDIAN|LITTLE] [S|FINT_REGISTER|0]" 5 
+"[V|VERSION|1] [B|DEBUG|0] [S|OUTPUTPATH|^"$(CONFIGDIR)\$(FILELEAF).obj^"] [B|LISTFILE|0] [S|CPU|RX600] [S|ENDIAN|LITTLE] [S|FINT_REGISTER|0]" 3 
+"[V|VERSION|1] [B|DEBUG|0] [S|OUTPUTPATH|^"$(CONFIGDIR)\$(FILELEAF).obj^"] [B|LISTFILE|0] [S|CPU|RX600] [S|ENDIAN|LITTLE] [S|ROUND|NEAREST] [S|DBL_SIZE|4] [B|SIGNED_CHAR|0] [B|SIGNED_BITFIELD|0] [S|BIT_ORDER|RIGHT] [S|FINT_REGISTER|0] [S|BRANCH|24]" 2 
+"[V|VERSION|6] [B|DEBUG|0] [S|OUTPUT|^"$(CONFIGDIR)\$(PROJECTNAME).abs^"]  [B|LIST|1] [S|LIST|^"$(CONFIGDIR)\$(PROJECTNAME).map^"] [B|OPTIMIZE|0] [S|ROM|(D,R)|(D_1,R_1)|(D_2,R_2)] [S|ENDIAN|LITTLE] [S|FORM|STYPE] [S|OUTPUT|^"$(CONFIGDIR)\$(PROJECTNAME).mot^"] [S|START|B_1,R_1,B_2,R_2,B,R,SU,SI(1000)|PResetPRG(FFFF8000)|C_1,C_2,C,C$*,D*,P,PIntPRG,W*(FFFF8100)|FIXEDVECT(FFFFFFD0)]" 4 
+[EXCLUDED_FILES_Release]
+[LINKAGE_ORDER_Release]
+[GENERAL_DATA_CONFIGURATION_Release]
+[GENERAL_DATA_CONFIGURATION_SESSION_Debug_DefaultSession]
+[SESSION_DATA_CONFIGURATION_SESSION_Debug_DefaultSession]
+"MEMORY_MAPPING_OPTIONS" "" 
+[GENERAL_DATA_CONFIGURATION_SESSION_Debug_SessionRX600_Segger_J-Link]
+[SESSION_DATA_CONFIGURATION_SESSION_Debug_SessionRX600_Segger_J-Link]
+"MEMORY_MAPPING_OPTIONS" "Unknown Options" 
+[GENERAL_DATA_CONFIGURATION_SESSION_Debug_RX600_Segger_J-Link_DefaultSession]
+[SESSION_DATA_CONFIGURATION_SESSION_Debug_RX600_Segger_J-Link_DefaultSession]
+"MEMORY_MAPPING_OPTIONS" "" 
+[GENERAL_DATA_CONFIGURATION_SESSION_Debug_RX600_Segger_J-Link_SessionRX600_Segger_J-Link]
+[SESSION_DATA_CONFIGURATION_SESSION_Debug_RX600_Segger_J-Link_SessionRX600_Segger_J-Link]
+"MEMORY_MAPPING_OPTIONS" "Unknown Options" 
+[GENERAL_DATA_CONFIGURATION_SESSION_Release_DefaultSession]
+[SESSION_DATA_CONFIGURATION_SESSION_Release_DefaultSession]
+"MEMORY_MAPPING_OPTIONS" "" 
+[GENERAL_DATA_CONFIGURATION_SESSION_Release_SessionRX600_Segger_J-Link]
+[SESSION_DATA_CONFIGURATION_SESSION_Release_SessionRX600_Segger_J-Link]
+"MEMORY_MAPPING_OPTIONS" "Unknown Options" 
+[EXT_DEBUGGER_INFO]
+0 "" "" "" "" 
+[END]

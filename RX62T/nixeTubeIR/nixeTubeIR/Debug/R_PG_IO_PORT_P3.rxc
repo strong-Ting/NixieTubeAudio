@@ -1,0 +1,7 @@
+-cpu=rx600
+-lang=c
+-include="c:\renesas\PDG2_proj\nixeTubeIR","c:\renesas\PDG2_proj\nixeTubeIR\i_src"
+-output=obj="C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\R_PG_IO_PORT_P3.obj"
+-debug
+"c:\renesas\PDG2_proj\nixeTubeIR\IO\R_PG_IO_PORT_P3.c"
+-nologo

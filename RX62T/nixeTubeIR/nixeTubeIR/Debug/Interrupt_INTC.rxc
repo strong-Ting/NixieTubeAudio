@@ -1,0 +1,7 @@
+-cpu=rx600
+-lang=c
+-include="c:\renesas\PDG2_proj\nixeTubeIR","c:\renesas\PDG2_proj\nixeTubeIR\i_src","C:\Renesas\PDG2_proj\nineClock","C:\Renesas\PDG2_proj\nineClock\i_src"
+-output=obj="C:\WorkSpace\nixeTubeIR\nixeTubeIR\Debug\Interrupt_INTC.obj"
+-debug
+"C:\Renesas\PDG2_proj\nineClock\i_src\Interrupt_INTC.c"
+-nologo
