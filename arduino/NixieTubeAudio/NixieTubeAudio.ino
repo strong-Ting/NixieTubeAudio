@@ -18,9 +18,6 @@ unsigned char i=0,data[24]={  1,1,1,1,1,1,1,1,
   1,1,1,1,1,1,1,1,
   1,1,1,1,1,1,1,1};
   
-unsigned char ledData[24] = {1,1,1,1,1,1,1,1,
-  1,1,1,1,1,1,1,1,
-  1,1,1,1,1,1,1,1};
 
 
 const int RECV_PIN = 2;
@@ -124,17 +121,21 @@ void ControlTube(unsigned int tube,unsigned int num){
 void ledControl(unsigned char led,unsigned char colorValue){
   /*
   0x0 off
-  0x1 R
-  0x2 G
-  0x3 yellow
-  0x4 B
-  0x5 purple
-  0x6 sky Blue
-  0x7 white
+  0x1 Blue
+  0x2 Green
+  0x3 Sky Blue
+  0x4 Red
+  0x5 Purple
+  0x6 Yellow
+  0x7 White
    */ 
-  ledData[led*4+1] = !(colorValue&0x1);
-  ledData[led*4+2] = !(colorValue&0x2);
-  ledData[led*4+3] = !(colorValue&0x4);
+  static unsigned long LedSPIValue = ~(0xffffffff);
+  LedSPIValue |= (unsigned long)(colorValue&0x1)<<(led*4);
+  LedSPIValue |= (unsigned long)(colorValue&0x2)<<(led*4);
+  LedSPIValue |= (unsigned long)(colorValue&0x4)<<(led*4);
+ 
+
+  RGBledUpdate(~LedSPIValue);
 }
 void RGBledControl(unsigned char led,unsigned char color){
   if(led & 0x1){
@@ -156,7 +157,7 @@ void RGBledControl(unsigned char led,unsigned char color){
     ledControl(5,color);
   }
   
-  RGBledUpdate();
+ 
 }
 
 unsigned char ledValue,colorValue,brightValue,microSecCount;
@@ -177,10 +178,9 @@ void RGBledPWM(){
   }
   
 }
-void RGBledUpdate(void){
-  
+void RGBledUpdate(unsigned long LedSPIValue){
   digitalWrite(LedLatch,0);//latch pin to low
-  SPI.transfer(B10001000);
+  SPI.transfer(&LedSPIValue,3);
   digitalWrite(LedLatch,1); //latch pin to high 
 }
 
@@ -193,8 +193,12 @@ void loop() {
         irrecv.resume();
   }
 
-  RGBledUpdate();
-  
+  ledControl(0,6);  
+   ledControl(1,5);  
+    ledControl(2,4);  
+     ledControl(3,3);  
+      ledControl(4,2);
+       ledControl(5,1);    
   for(i=0;i<6;i++){
       ControlTube(i,x);
   }
@@ -205,10 +209,7 @@ void loop() {
     else{
       x++;
     }
-   for(i=0;i<24;i++){
-      Serial.print(data[i]); 
-   }
-   Serial.print('\n'); 
+ 
   
   delay(1000);
 }
