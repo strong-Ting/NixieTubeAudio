@@ -1,5 +1,6 @@
 #include <IRremote.h>
 #include <TimerOne.h>
+#include <SPI.h>
 
 #define TubeData 3
 #define TubeShift 4
@@ -46,7 +47,10 @@ void setup() {
   Timer1.initialize(1); //1us
   Timer1.attachInterrupt(RGBledPWM);
 */
-
+  SPI.setBitOrder(LSBFIRST);
+  SPI.setDataMode(SPI_MODE0);
+  SPI.setClockDivider(SPI_CLOCK_DIV2);
+  SPI.begin();
 
   irrecv.enableIRIn();
   irrecv.blink13(true);
@@ -175,28 +179,10 @@ void RGBledPWM(){
 }
 void RGBledUpdate(void){
   
-  digitalWrite(5,0);//latch pin to low
-  for(i=0;i<24;i++){
-    digitalWrite(3,ledData[23-i]); //data
-    digitalWrite(6,1); //shift
-    digitalWrite(6,0); //shift
-  }
-  digitalWrite(5,1); //latch pin to high 
+  digitalWrite(LedLatch,0);//latch pin to low
+  SPI.transfer(B10001000);
+  digitalWrite(LedLatch,1); //latch pin to high 
 }
-
-void ledRest(void){
-  digitalWrite(3,0); //data
-  digitalWrite(6,0); //shift
-  digitalWrite(5,0); //storge
-  digitalWrite(4,0); //output en 0==output enable
-  digitalWrite(7,0); //rest low==rest
-  digitalWrite(7,1);
-  
-}
-
-
-
-
 
 
 unsigned char x;
@@ -207,7 +193,7 @@ void loop() {
         irrecv.resume();
   }
 
-
+  RGBledUpdate();
   
   for(i=0;i<6;i++){
       ControlTube(i,x);
