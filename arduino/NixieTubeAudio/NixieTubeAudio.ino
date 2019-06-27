@@ -53,8 +53,27 @@ void setup() {
   irrecv.blink13(true);
 
   //RGBledControl(63,7);
-  
+ 
+  //open bluetooth audio close FM radio
+  pinMode(A4,OUTPUT);
+  pinMode(A5,OUTPUT);
+  digitalWrite(A4,0);
+  digitalWrite(A5,0); //bluetooth
+
+
   Serial.begin(9600);
+
+  int j,k;
+  /*
+  for(j=0;j<6;j++){
+    for(k=0;k<8;k++){
+      ledControl(j,k);
+      delay(300);
+    }
+  }*/
+  ledControl(4,5);
+  
+
 }
 void resetTubeAndLed(){
   //led
@@ -82,8 +101,11 @@ void resetTubeAndLed(){
 
 
 
+unsigned long startTime=0,endTime=0,durationTime=0;
 
 void updateTube(void){
+  
+
   digitalWrite(TubeLatch,LOW);//latch pin to low
   for(i=0;i<24;i++){
     digitalWrite(TubeData,data[23-i]); //data
@@ -91,6 +113,8 @@ void updateTube(void){
     digitalWrite(TubeShift,LOW);  //shift
   }
   digitalWrite(TubeLatch,HIGH);  //latch
+
+  
 }
 
 void ControlTube(unsigned int tube,unsigned int num){
@@ -116,10 +140,15 @@ void ControlTube(unsigned int tube,unsigned int num){
 
 }
 
-
-
+const unsigned long LedTable[6][8] ={ {0xFFFFFFFF,0xFFFFFFFE,0xFFFFFFFC,0xFFFFFFFC,0xFFFFFFF8,0xFFFFFFF8,0xFFFFFFF8,0xFFFFFFF8},
+                                      {0xFFFFFFFF,0xFFFFFFEF,0xFFFFFFCF,0xFFFFFFCF,0xFFFFFF8F,0xFFFFFF8F,0xFFFFFF8F,0xFFFFFF8F},
+                                      {0xFFFFFFFF,0xFFFFFEFF,0xFFFFFCFF,0xFFFFFCFF,0xFFFFF8FF,0xFFFFF8FF,0xFFFFF8FF,0xFFFFF8FF},
+                                      {0xFFFFFFFF,0xFFFFEFFF,0xFFFFCFFF,0xFFFFCFFF,0xFFFF8FFF,0xFFFF8FFF,0xFFFF8FFF,0xFFFF8FFF},
+                                      {0xFFFFFFFF,0xFFFEFFFF,0xFFFCFFFF,0xFFFCFFFF,0xFFF8FFFF,0xFFF8FFFF,0xFFF8FFFF,0xFFF8FFFF},
+                                      {0xFFFFFFFF,0xFFEFFFFF,0xFFCFFFFF,0xFFCFFFFF,0xFF8FFFFF,0xFF8FFFFF,0xFF8FFFFF,0xFF8FFFFF}};  
+/*
 void ledControl(unsigned char led,unsigned char colorValue){
-  /*
+  
   0x0 off
   0x1 Blue
   0x2 Green
@@ -128,15 +157,72 @@ void ledControl(unsigned char led,unsigned char colorValue){
   0x5 Purple
   0x6 Yellow
   0x7 White
-   */ 
+  
+  
   static unsigned long LedSPIValue = ~(0xffffffff);
+  startTime = micros();
+ 
+  //speed slow
   LedSPIValue |= (unsigned long)(colorValue&0x1)<<(led*4);
   LedSPIValue |= (unsigned long)(colorValue&0x2)<<(led*4);
   LedSPIValue |= (unsigned long)(colorValue&0x4)<<(led*4);
- 
+  //LedSPIValue = ~LedSPIValue;
+  
+  //LedSPIValue = LedTable[led][colorValue];
+  endTime = micros();
 
   RGBledUpdate(~LedSPIValue);
+  
+  durationTime = endTime - startTime;
+  //Serial.println(durationTime);
+    Serial.print(",0x");
+  Serial.print(~LedSPIValue,HEX);
+  
+
+
+  
 }
+*/
+//unsigned long LedSPIValue = 0xffffffff;
+void bit_ctrl_0(unsigned long* pflag, unsigned char bitNum) {
+  *pflag &= ~((unsigned long)1 << bitNum);
+} 
+void bit_ctrl_1(unsigned long* pflag, unsigned char bitNum) {
+  *pflag |=  ((unsigned long)1 << bitNum);
+}
+
+void ledControl(unsigned char led,unsigned char colorValue){
+  static unsigned long LedSPIValue = (0xffffffff);
+ 
+
+  if(colorValue&0x1){
+    bit_ctrl_0(&LedSPIValue,led*4);
+  }else{
+    bit_ctrl_1(&LedSPIValue,led*4);
+  }
+   Serial.println(LedSPIValue,HEX);
+  
+  if(colorValue&0x2){
+    bit_ctrl_0(&LedSPIValue,led*4+1);
+  }else{
+    bit_ctrl_1(&LedSPIValue,led*4+1);
+  }
+    Serial.println(LedSPIValue,HEX);
+    
+  if(colorValue&0x4){
+    bit_ctrl_0(&LedSPIValue,led*4+2);
+  }else{
+    bit_ctrl_1(&LedSPIValue,led*4+2);
+    
+  }
+   Serial.println(LedSPIValue,HEX);
+  
+
+  Serial.println(LedSPIValue,HEX);
+  RGBledUpdate(LedSPIValue);
+  
+}
+
 void RGBledControl(unsigned char led,unsigned char color){
   if(led & 0x1){
     ledControl(0,color);
@@ -193,12 +279,7 @@ void loop() {
         irrecv.resume();
   }
 
-  ledControl(0,6);  
-   ledControl(1,5);  
-    ledControl(2,4);  
-     ledControl(3,3);  
-      ledControl(4,2);
-       ledControl(5,1);    
+
   for(i=0;i<6;i++){
       ControlTube(i,x);
   }
