@@ -69,8 +69,8 @@ void setup() {
 
   Serial.begin(9600);
   //TestLed();
-  FastLedControl(63,1);
-  RGBledUpdate();
+  //FastLedControl(63,1);
+ // RGBledUpdate();
  
 }
 
@@ -251,6 +251,19 @@ void FastLedControl(unsigned char led,unsigned char colorValue){
   }
   
 }
+unsigned char brightRed[6]={0},brightBlue[6]={0},brightGreen[6]={0};
+unsigned char led;
+void ledControlIndividualBright(unsigned char WhichLed,unsigned char color,unsigned char bright){
+  if(color == 'r'){
+    brightRed[WhichLed] = bright;
+  }
+  if(color == 'g'){
+    brightGreen[WhichLed] = bright;
+  }
+  if(color == 'b'){
+    brightBlue[WhichLed] = bright;
+  }
+}
 
 void RGBledUpdate(void){
   /*
@@ -263,18 +276,78 @@ void RGBledUpdate(void){
   setPin(LedLatch); //latch pin to high 
   
 }
-unsigned char bright,color,led;
+
+unsigned char j=0;
 void RGBledPWM(void){
   static unsigned char TimerOneCount=0;
   TimerOneCount++;
+   /*   
+  0x0 off
+  0x1 Blue
+  0x2 Green
+  0x3 Sky Blue
+  0x4 Red
+  0x5 Purple
+  0x6 Yellow
+  0x7 White
+  */  
+
+  //startTime = micros();
   
-  if(TimerOneCount== bright){
-    FastLedControl(led,0);
-    RGBledUpdate();
-  }else if(TimerOneCount==0){
-    FastLedControl(led,color);
-    RGBledUpdate(); 
+ 
+  for(j=0;j<6;j++){
+    switch (j)
+    {
+    case 0:
+      led=1;
+      break;
+    case 1:
+      led=2;
+      break;
+    case 2:
+      led=4;
+      break;
+    case 3:
+      led=8;
+      break;
+    case 4:
+      led=16;
+      break;
+    case 5:
+      led=32;
+      break;
+    default:
+      led=0;
+      break;
+    }
+    if(TimerOneCount == (256-brightBlue[j])){
+      FastLedControl(led,1);
+      RGBledUpdate();
+
+    }
+    if(TimerOneCount == (256-brightGreen[j])){
+      FastLedControl(led,2);
+      RGBledUpdate();
+
+    }
+    if(TimerOneCount == (256-brightRed[j])){
+      FastLedControl(led,4);
+      RGBledUpdate();
+
+    }
   }
+   if(TimerOneCount==0){
+    LedSPIValueArray[0] = B11111111;
+    LedSPIValueArray[1] = B11111111;
+    LedSPIValueArray[2] = B11111111; 
+    RGBledUpdate();
+
+  }
+  
+  //endTime = micros();
+  //durationTime = endTime - startTime;
+
+  //Serial.println(LedSPIValueArray[0]);
 }
 
 unsigned char x;
@@ -290,23 +363,23 @@ void loop() {
  // RGBledControl(63,5);
   
   for(i=0;i<6;i++){
-      ControlTube(i,x);
+      ControlTube(i,9);
   }
   //updateTube();
-  startTime = micros();
+  //startTime = micros();
   //FastLedControl(63,7);
   //RGBledUpdate();
-  endTime = micros();
-  durationTime = endTime - startTime;
+  //endTime = micros();
+ // durationTime = endTime - startTime;
  // Serial.println(durationTime);
     if(x>=9){
       x=0;}
     else{
       x++;
     }
-  color = 3;
-  bright = 1;
-  led = 63;
+ 
+ 
+
   
   //delay(1000);
 }
