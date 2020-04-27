@@ -7,7 +7,7 @@
 ![1](https://github.com/strong-Ting/NixieTubeAudio/blob/master/demo.jpg)
 ![2](https://github.com/strong-Ting/NixieTubeAudio/blob/master/demo2.jpg)
 
-影片展示
+# 傅立葉轉換音訊效果 video
 [![](http://img.youtube.com/vi/pHRwg7Q7wME/0.jpg)](http://www.youtube.com/watch?v=pHRwg7Q7wME "")
 [![](http://img.youtube.com/vi/hynZKeinsIc/0.jpg)](http://www.youtube.com/watch?v=hynZKeinsIc "")
 
